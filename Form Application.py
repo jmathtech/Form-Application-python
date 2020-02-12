@@ -1,4 +1,3 @@
-import tkinter
 from tkinter import *
 
 #Main Window - Form Application
@@ -64,7 +63,7 @@ e15.grid(row = 14, column = 1)
 
 # Submit Button - Form
 
-submit = Button(master, text='Submit', fg='Black', bg='Red')
+submit = Button(master, text='Submit', fg='White', bg='Red')
 submit.grid(row=16, column=1)
  
 # Menu - Form Application
@@ -76,10 +75,12 @@ menu.add_cascade(label = 'File', menu = filemenu)
 filemenu.add_command(label = 'New')
 filemenu.add_command(label = 'Open')
 filemenu.add_separator()
-filemenu.add_command(label = 'Exit', command = master.quit)
+filemenu.add_command(label = 'Exit', command = master.destroy)
 helpmenu = Menu(menu)
 menu.add_cascade(label = 'Help', menu = helpmenu)
+filemenu.add_separator()
 helpmenu.add_command(label = 'About')
+helpmenu.add_command(label = 'License')
 mainloop()
 
 # Exit the Application
